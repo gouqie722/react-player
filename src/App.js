@@ -1,6 +1,8 @@
+import React from 'react'
 import './App.css';
+import './App.less'
 import { 
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
   Link
@@ -8,10 +10,11 @@ import {
 import Home from './pages/Home/index'
 import About from './pages/About/index'
 import User from './pages/user/index'
+import NoMatch from './pages/NoMatch/index'
 function App() {
   return (
-    <Router>
-      <div>
+    <BrowserRouter>
+      <div className="app">
         <nav>
           <ul>
             <li>
@@ -26,23 +29,25 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <About></About>
           </Route>
-          <Route path="/user">
+          <Route exact path="/user/:id">
             <User></User>
           </Route>
+          <Route component={NoMatch} /> { /** 匹配不到，则展示404 */}
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
-
-
+// 文档
+// http://www.ruanyifeng.com/blog/2016/05/react_router.html
+// https://reactrouter.com/web/example/recursive-paths
 
 
 export default App;
