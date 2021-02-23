@@ -1,0 +1,82 @@
+.music {
+  padding: 75px 25px 25px 25px;
+  max-width: 1750px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: block !important;
+  .music-content {
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    .music-left {
+      flex: 1 1 auto;
+      height: 100%;
+      .music-btn{
+        width: 100%;
+        height: 60px;
+        white-space: nowrap;
+        overflow-x: auto;
+        >a {
+          display: inline-block;
+          height: 40px;
+          box-sizing: border-box;
+          margin-right: 8px;
+          padding: 0 23px;
+          border: 1px solid hsla(0, 0%, 100%, 0.6);
+          color: hsla(0, 0%, 100%, 0.6);
+          border-radius: 2px;
+          font-size: 14px;
+          text-decoration: none;
+          line-height: 40px;
+          &.active {
+            color: #fff;
+            border-color: #fff;
+          }
+          &:hover{
+            color: #fff;
+            border-color: #fff;
+          }
+        }
+      }
+      .music-list {
+        width: 100%;
+        height: calc(100% - 60px);
+      }
+    }
+    .music-right{
+      flex: 0 0 310px;
+      margin-left: 10px;
+    }
+  }
+  .music-bar {
+    width: 100%;
+    height: 80px;
+
+  }
+  .player-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-position: 50%;
+    // background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // filter: blur(12px);
+    transition: all 0.8s;
+    z-index: -2;
+  }
+  .player-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0,0,0,.4);
+  }
+}

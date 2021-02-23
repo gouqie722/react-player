@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
-
-export default class About extends Component {
-    render() {
-        return (
-            <div className="about">
-                about
-            </div>
-        )
-    }
+import React, { } from 'react'
+import { useHistory } from 'react-router-dom'
+export default function About () {
+    let history = useHistory()
+    return (
+        <div className="about">
+            about
+            <button onClick={() => { history.push('/') }}>跳转到home</button>
+        </div>
+    )
 }
+
