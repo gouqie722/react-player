@@ -3,6 +3,7 @@ import "./App.css";
 import "./App.less";
 import routes from "./router/index";
 import store, { setAudio } from './store/index.js'
+import { Provider } from 'react-redux'
 import { HashRouter as BrowserRouter, Switch, Route } from "react-router-dom";
 // import { Router } from 'react-router'
 // import { createBrowserHistory } from 'history'
@@ -113,7 +114,8 @@ function App() {
   // })
   // console.log(RouterComponent)
   return (
-    <BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
       <div className="app">
         <header className="mm-header">
           <h1>
@@ -146,6 +148,7 @@ function App() {
         <audio ref={audioEle}></audio>
       </div>
     </BrowserRouter>
+    </Provider>
   );
 }
 

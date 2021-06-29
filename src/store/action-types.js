@@ -1,0 +1,2 @@
+export const SET_AUDIO_ELE = 'SET_AUDIO_ELE'
+export const SET_CURRENT_INDEX = 'SET_CURRENT_INDEX'

@@ -1,19 +1,20 @@
 // import React, {Provider} from 'react';
 import React from 'react'
-import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'reset-css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 // var el = Provider
 ReactDOM.render(
-  // <Provider store={{}}>
+
     <React.StrictMode>
-      <App />
+      {/* <Provider store={store}> */}
+        <App />
+      {/* </Provider> */}
     </React.StrictMode>
-  // </Provider>,
   ,
   document.getElementById('root')
 );
